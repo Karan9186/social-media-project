@@ -1,0 +1,11 @@
+.mainSaved {
+  margin-left: 23vw;
+  max-width: 60vw;
+  min-width: 60vw;
+}
+
+.mainSaved img {
+  height: 30vh;
+  width: 100%;
+  object-fit: contain;
+}

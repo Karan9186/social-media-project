@@ -1,0 +1,65 @@
+.mainCreatePost {
+  /* position: fixed; */
+  /* z-index: 300; */
+  background-color: transparent;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all ease-out 0.5s;
+  margin-left: 7vw;
+  margin-top: 2vh;
+}
+
+.main_back {
+  background-color: white;
+  padding: 20px 20px;
+  width: 60vw;
+  box-shadow: 1px 1px 10px grey;
+  border-radius: 10px;
+  /* height: 50vh; */
+}
+
+.show {
+  top: 100px
+}
+
+.not {
+  top: 200px
+}
+
+.postTitle {
+  height: 230px;
+  border: none;
+  resize: none;
+  height: 170px;
+  overflow-y: scroll;
+}
+
+.postTitle:focus {
+  outline: none;
+}
+
+.crossIcon {
+  position: relative;
+  left: 97%;
+  top: -8px;
+  z-index: 200;
+  font-size: 20px;
+}
+
+.forTag {
+  display: flex;
+  gap: 20px;
+}
+
+.forTag .inputTag {
+  border: none;
+  padding: 5px 10px;
+  width: 20%;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.316);
+  ;
+}
+.forTag .inputTag:focus{
+  outline: none;
+}

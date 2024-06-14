@@ -1,0 +1,104 @@
+.messageMain {
+  margin-left: 23vw;
+  background-color: white;
+  min-width: 60vw;
+  max-width: 68vw;
+  height: 66vh;
+  padding: 10px 20px;
+  border-radius: 6px;
+  display: flex;
+  gap: 20px;
+  box-shadow: 1px 1px 10px rgba(128, 128, 128, 0.207);
+}
+
+.profileName {
+  width: 50%;
+  overflow-y: scroll;
+}
+
+.profileName .demoUser {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  text-align: left;
+  width: 100%;
+  border: none;
+  background-color: transparent;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.144);
+  transition: 0.6s;
+  padding-bottom: 5px;
+}
+
+.profileName .active {
+  border-left: 7px solid rgba(0, 0, 255, 0.499);
+}
+
+.profileName .demoUser:hover {
+
+  background-color: rgba(225, 225, 225, 0.469);
+}
+
+.UserDetails {
+  line-height: 2ch;
+}
+
+.MessageClass {
+  width: 50%;
+}
+
+.mainChatUser {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  line-height: .1ch;
+  width: 100%;
+}
+
+.mainChatUser img {
+  height: 40px;
+  width: 40px;
+}
+
+.bgForMainDiv {
+  /* background-color: rgba(128, 128, 128, 0.175); */
+  padding: 3px 10px;
+  border-radius: 5px;
+  align-items: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.323);
+}
+
+.iconBtnForMsg {
+  background-color: transparent;
+  border: none;
+  padding: 6px 6px;
+}
+
+.iconBtnForMsg:hover {
+  background-color: rgba(128, 128, 128, 0.122);
+  border-radius: 50%;
+}
+
+.mainMessageBox {
+  background-color: white;
+  padding: 6px 6px;
+  height: 67%;
+  overflow-y: scroll;
+}
+
+.sendMessage {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.inputMsg {
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.234);
+}
+.inputMsg:focus{
+  outline: none;
+}
