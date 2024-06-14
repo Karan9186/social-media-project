@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./creatpost.css";
 import { MdDelete, MdOutlinePoll, MdSchedule } from "react-icons/md";
 import { TbPhoto } from "react-icons/tb";
@@ -14,6 +14,8 @@ function CreatePost({ selectSide, setSelectSide, setPostdata, postData }) {
     e.preventDefault();
     let allD = postDetails.current.value;
     let popstTag = tag;
+
+    // without api
     // let CurrenData = [
     //   ...postData,
     //   {
@@ -27,6 +29,9 @@ function CreatePost({ selectSide, setSelectSide, setPostdata, postData }) {
     //   },
     // ];
     // setPostdata(CurrenData);
+
+    // with api
+
     fetch("https://dummyjson.com/posts/add", {
       method: "POST",
       headers: { "Content-Type": "application/json" },

@@ -22,17 +22,19 @@ function App() {
   useEffect(() => {
     setLoader(true);
     // Fetch data from dummyjson API
-    fetch("https://dummyjson.com/posts")
+    let controller = new AbortController();
+    let signal = controller.signal;
+    fetch("https://dummyjson.com/posts", { signal })
       .then((res) => res.json())
-
       .then((data) => {
         // Update the state with fetched data
         setPostdata(data.posts);
         setLoader(false);
-      })
-      .catch((error) => {
-        console.error("Error fetching data:", error);
       });
+    return () => {
+      console.log("aborted");
+      controller.abort();
+    };
   }, []);
 
   let allPost = [...postData].reverse().map((post, i) => {
