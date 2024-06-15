@@ -10,6 +10,7 @@ import Profile from "./component/Profile";
 import Saved from "./component/Saved";
 import Message from "./component/Message";
 import Help from "./component/Help";
+import AllPost from "./AllPost";
 
 function App() {
   let [selectSide, setSelectSide] = useState(false);
@@ -36,10 +37,6 @@ function App() {
       controller.abort();
     };
   }, []);
-
-  let allPost = [...postData].reverse().map((post, i) => {
-    return <Post key={i} post={post} />;
-  });
 
   return (
     <>
@@ -70,17 +67,18 @@ function App() {
               {home == "" ? (
                 loader == true ? (
                   <div style={{ height: "100vh" }}>
-                    <div
-                      class="text-center"
-                      style={{ marginLeft: "50vw", marginTop: "30vh" }}
-                    >
-                      <div class="spinner-border text-primary" role="status">
-                        <span class="sr-only "></span>
+                    <div className="text-center" style={{ marginLeft: "50vw" }}>
+                      <div
+                        className="spinner-border text-primary"
+                        role="status"
+                        style={{ marginTop: "25vh" }}
+                      >
+                        <span className="sr-only "></span>
                       </div>
                     </div>
                   </div>
                 ) : (
-                  allPost
+                  <AllPost postData={postData} />
                 )
               ) : (
                 <div>
